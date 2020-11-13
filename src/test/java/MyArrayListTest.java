@@ -11,7 +11,7 @@ class MyArrayListTest {
     @org.junit.jupiter.api.Test
     void get() {
         list.put(3);
-        Assertions.assertEquals(list.get(0), 3);
+        Assertions.assertEquals(3,list.get(0) );
     }
 
     @org.junit.jupiter.api.Test
