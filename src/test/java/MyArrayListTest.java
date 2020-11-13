@@ -17,18 +17,18 @@ class MyArrayListTest {
     @org.junit.jupiter.api.Test
     void put() {
         list.put(6);
-        Assertions.assertEquals(list.get(0), 6);
+        Assertions.assertEquals(6, list.get(0));
         list.put(7);
-        Assertions.assertNotEquals(list.get(1), 8);
+        Assertions.assertNotEquals(8, list.get(1));
     }
 
     @org.junit.jupiter.api.Test
     void size() {
-        Assertions.assertEquals(list.size(), 0);
+        Assertions.assertEquals(0, list.size());
         list.put(6);
         list.put(6);
         list.put(6);
-        Assertions.assertEquals(list.size(), 3);
+        Assertions.assertEquals(3, list.size());
 
     }
 
@@ -43,17 +43,17 @@ class MyArrayListTest {
     void clear() {
         list.put(6);
         list.put(7);
-        Assertions.assertEquals(list.size(), 2);
+        Assertions.assertEquals(2, list.size());
         list.clear();
-        Assertions.assertEquals(list.size(), 0);
+        Assertions.assertEquals(0, list.size());
         Assertions.assertFalse(list.contains(6));
         Assertions.assertFalse(list.contains(7));
     }
 
     @org.junit.jupiter.api.Test
     void capacity() {
-        Assertions.assertEquals(list.capacity(), 10);
+        Assertions.assertEquals(10, list.capacity());
         for (int i = 0; i < 15; i++) list.put(10);
-        Assertions.assertEquals(list.capacity(), 20);
+        Assertions.assertEquals(20, list.capacity());
     }
 }
